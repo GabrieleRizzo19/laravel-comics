@@ -22,7 +22,10 @@ Route::get('/', function () {
     return view('homepage', $data);
 });
 
-Route::get('/otherpage', function () {
-    $links = config('store.someLinks');
-    return view('single', compact('links'));
+Route::get('/action-111', function () {
+    $data = [
+        "headerLinks" => config('store.headerLinks'),
+        "comicsArray" => config('comics')
+    ];
+    return view('single', $data);
 });

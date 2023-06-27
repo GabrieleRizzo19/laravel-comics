@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title', 'Title Override: Other Page')
+@section('page-title', 'Action Comics #1000: The Deluxe Edition')
 @section('content')
 <div class="container my-3">
     <h1>Other Page</h1>
