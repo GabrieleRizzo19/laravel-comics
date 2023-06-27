@@ -12,6 +12,6 @@
         "vite": "^2.9.11"
     },
     "dependencies": {
-        "@popperjs/core": "^2.11.8",
+        "@popperjs/core": "^2.11.8"
     }
 }

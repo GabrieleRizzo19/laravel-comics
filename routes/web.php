@@ -16,16 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $data = [
         "headerLinks" => config('store.headerLinks'),
-        "comicsArray" => config('comics')
+        "comicsArray" => config('comics'),
+        'iconBarItems' => config('store.iconBarItems')
     ];
 
     return view('homepage', $data);
 });
 
-Route::get('/action-111', function () {
+Route::get('/comics-{id}', function ($id) {
     $data = [
         "headerLinks" => config('store.headerLinks'),
-        "comicsArray" => config('comics')
+        "comic" => config('comics')[$id],
+        'iconBarItems' => config('store.iconBarItems'),
     ];
-    return view('single', $data);
-});
+    return view('comic', $data);
+})->name('comic');
