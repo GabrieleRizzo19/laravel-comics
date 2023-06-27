@@ -8,6 +8,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+// VARIABLES
+
+$blue-dc: #0282f9; 
+
 // UTILITIES
 
 .container{
@@ -71,5 +75,77 @@ header{
         &:hover{
             color: #0282f9;
         }
+    }
+}
+
+// MAIN
+
+
+
+
+// FOOTER
+
+.footer-top{
+    height: 380px;
+    background-image: url('img/footer-bg.jpg');
+    color: white;
+    padding-top: 2rem;
+    overflow: hidden;
+
+    .footer-top-column{
+        margin-right: 2rem;
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 1rem 0;
+
+        small{
+            color: grey;
+        }
+    }
+
+    .footer-list-title{
+        margin-bottom: 5rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+
+        &:hover{
+            color: white;
+        }
+    }
+
+    img{
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.footer-bottom{
+    height: 120px;
+    background-color: #303030;
+
+
+    .container{
+        height: 100%;
+    }
+
+    button{
+        background-color: transparent;
+        padding: 1rem;
+        border: 2px solid $blue-dc;
+        color: white;
+    }
+
+    h4{
+        color:  $blue-dc;
+    }
+
+    .social-link-container{
+        gap: 1rem;
     }
 }
