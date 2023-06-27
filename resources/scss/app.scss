@@ -1,28 +1,75 @@
-/* importo bootstrap dalla cartella node_modules usando l'alias settato in vite.config.js */
-@import "~bootstrap/scss/bootstrap";
-
-* {
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box;
+    margin: 0;
+    border: 0;
 }
 
-img {
-    max-width: 100%;
+body{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: #222;
-    color: white;
+// UTILITIES
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-header,
-footer {
-    width: 100%;
-    background: #EEE;
-    color: black;
+.d-flex{
+    display: flex;
 }
 
-header img.logo {
-    height: 2rem;
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-start{
+    justify-content: flex-start;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.pos-absolute{
+    position: absolute;
+}
+
+.pos-relative{
+    position: relative;
+}
+
+// HEADER
+
+header{
+    height: 120px;
+}
+
+.header-wrapper{
+    height: 100%;
+
+    ul{
+        list-style: none;
+    }
+
+    button{
+        background-color: transparent;
+        font-weight: bold;
+        color: grey;
+        padding: 1rem;
+        cursor: pointer;
+
+        &:hover{
+            color: #0282f9;
+        }
+    }
 }
