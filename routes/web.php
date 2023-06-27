@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $data = [
-        "headerLinks" => config('store.headerLinks')
+        "headerLinks" => config('store.headerLinks'),
+        "comicsArray" => config('comics')
     ];
 
     return view('homepage', $data);

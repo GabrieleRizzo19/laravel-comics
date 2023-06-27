@@ -1,18 +1,33 @@
 @extends('layouts.app')
 
-@section('page-title', 'HOME PAGE')
+@section('page-title', 'DC COMICS')
 
 @section('content')
-<div class="container my-3">
-    <h1>Welcome Page</h1>
-    <div class="row g-4">
-        <div class="col">
-            <div>
-                <p class="text-primary">TESTO BLUE</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, delectus ad esse illum omnis earum eligendi sint a minus quasi, inventore nulla autem. Maxime voluptatem eligendi veniam voluptates. Soluta, sunt!</p>
+
+    <div class="jumbotron">
+        <img src="{{ Vite::asset('resources/img/jumbotron.jpg') }}" alt="JUMBOTRON">
+    </div>
+
+    <div class="main-content-wrapper">
+        <div class="container">
+
+            <div class="cards-container d-flex flex-wrap justify-content-center pos-relative">
+                <span class="cards-container-tag pos-absolute">CURRENT SERIES</span>
+                
+                    @foreach ($comicsArray as $comic)
+                    <div class="card">
+                        <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                        <figcaption>{{ $comic['title'] }}</figcaption>
+                    </div>
+                    @endforeach
+                
+        
             </div>
+        
+            <button>LOAD MORE</button>
+
         </div>
     </div>
 
-</div>
+
 @endsection
