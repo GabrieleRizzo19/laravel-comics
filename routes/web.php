@@ -17,17 +17,19 @@ Route::get('/', function () {
     $data = [
         "headerLinks" => config('store.headerLinks'),
         "comicsArray" => config('comics'),
-        'iconBarItems' => config('store.iconBarItems')
-    ];
+        'iconBarItems' => config('store.iconBarItems'),
+        'footerColumnLinks' => config('store.footerColumnLinks')
+        ];
 
     return view('homepage', $data);
 });
 
-Route::get('/comics-{id}', function ($id) {
+Route::get('/comic-{id}', function ($id) {
     $data = [
         "headerLinks" => config('store.headerLinks'),
         "comic" => config('comics')[$id],
         'iconBarItems' => config('store.iconBarItems'),
+        'footerColumnLinks' => config('store.footerColumnLinks')
     ];
     return view('comic', $data);
 })->name('comic');

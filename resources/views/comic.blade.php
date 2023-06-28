@@ -31,7 +31,7 @@
                 </div>
                 <div class="rightside-adv w-30 text-end">
                     <span>ADVERTISEMENT</span>
-                    <img src="{{ Vite::asset('resources/img/adv.jpg') }}" alt="">
+                    <img class="w-100" src="{{ Vite::asset('resources/img/adv.jpg') }}" alt="">
                 </div>
             </div>
         </div>
